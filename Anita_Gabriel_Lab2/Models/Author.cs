@@ -13,9 +13,15 @@ namespace Anita_Gabriel_Lab2.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [NotMapped]
-        [Display(Name = "Author")]
-        public string FullName => FirstName + " " + LastName;
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
+            get
+            {
+                return FirstName + " " + LastName;
+            }
+        }
+
 
         public ICollection<Book>? Books { get; set; } //navigation property
     }
