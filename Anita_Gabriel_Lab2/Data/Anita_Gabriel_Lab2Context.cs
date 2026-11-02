@@ -9,7 +9,9 @@ namespace Anita_Gabriel_Lab2.Data
 {
     public class Anita_Gabriel_Lab2Context : DbContext
     {
+        public DbSet<Anita_Gabriel_Lab2.Models.Borrowing> Borrowing { get; set; } = default!;
         public DbSet<Anita_Gabriel_Lab2.Models.Category> Category { get; set; } = default!;
+        public DbSet<Anita_Gabriel_Lab2.Models.Member> Member { get; set; } = default!;
         public Anita_Gabriel_Lab2Context (DbContextOptions<Anita_Gabriel_Lab2Context> options)
             : base(options)
         {
