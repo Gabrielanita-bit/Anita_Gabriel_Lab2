@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Anita_Gabriel_Lab2.Data;
 using Anita_Gabriel_Lab2.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Anita_Gabriel_Lab2.Pages.Books
 {
+    [Authorize(Roles = "Admin")]
     public class CreateModel : BookCategoriesPageModel
     {
         private readonly Anita_Gabriel_Lab2Context _context;
